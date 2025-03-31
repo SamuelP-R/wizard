@@ -3,7 +3,8 @@ body {
   }
 
 .form-register{
-    width: 550px;
+    width: 750px;
+    height: 550%;
     background-color: white;
     padding: 100px;
     margin: auto;
@@ -51,6 +52,30 @@ body {
     font-size: 16px;
   }
 
+  .form-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px/* Espacio entre los elementos */
+  }
+
+  .form-content{
+    flex: 100;/*Formulario ocupa el espacio restante*/
+  }
+
+  .image img {
+    max-width: 50%;
+    height: 521px;
+    display: block;
+  }
+
+  .image{
+    width: 600px;
+    height: 400px;
+    margin: 0;
+    padding: auto;
+  }
+  
   .controls {
     width: 45%;
     height:20%;
@@ -65,8 +90,13 @@ body {
     flex-flow: 12;
   }
 
-  .image{
-    width: 100%;
-  }
-  
+  div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+section {
+  display: block;
+  unicode-bidi: isolate;
+}
 
