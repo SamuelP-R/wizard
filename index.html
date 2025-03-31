@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Primer Formulario Informacion Fiscal -->
+    <section id="form-1" class="form-register">
+        <div>
+            <div class="image">
+                <img src="" alt="">
+            </div>
+            <div>
+                <h4>Datos Fiscales</h4>
+        <p>Ingrese sus datos Fiscales</p>
+        <input type="text" placeholder="Ingrese su Nombre" class="controls">
+        <input type="text" placeholder="Ingrese su RFC" class="controls"> 
+        <input type="text" placeholder="Ingrese su CURP" class="controls"> 
+        <input type="text" placeholder="Ingrese el Nombre o Razon Social" class="controls"> 
+        <input type="text" placeholder="Regimen Fiscal" class="controls"> 
+        <input type="text" placeholder="Regimen Fical del Receptor" class="controls"> 
+
+        <!-- Boton -->
+        <input type="button" value="Siguiente" class="botons" onclick="showNextSection()"> 
+            </div>
+        </div>
+        
+    </section>
+    <!-- Segundo Formulario Domicilio -->
+    <section id="form-2" class="form-register">
+        <h4>Domicilio</h4>
+        <p>Ingrese su Domicilio</p>
+        <input type="text" placeholder="Ingrese su Calle" class="controls">
+        <input type="text" placeholder="Ingrese su No. Ext." class="controls"> 
+        <input type="text" placeholder="Ingrese su No. Int." class="controls"> 
+        <input type="text" placeholder="Ingrese su Colonia" class="controls"> 
+        <input type="text" placeholder="Ingrese su Ciudad" class="controls"> 
+        <input type="text" placeholder="Ingrese su Municipio" class="controls"> 
+        <input type="text" placeholder="Ingrese su Estado" class="controls"> 
+        <input type="text" placeholder="Ingrese su Pais" class="controls"> 
+        <input type="text" placeholder="Ingrese su Codigo Postal" class="controls"> 
+        <input type="text" placeholder="Ingrese su Referencia" class="controls"> 
+        <input type="text" placeholder="Ingrese su Clave pais" class="controls"> 
+        <input type="text" placeholder="Ingrese su Residencia fiscal" class="controls"> 
+
+        <!-- Botones -->
+        <input type="button" value="Siguiente" class="botons" onclick="showNextSection()"> 
+        <input type="button" value="Atrás" class="botons" onclick="goBack()">
+
+    </section>
+    <!-- Segundo Formulario Datos de Contacto -->
+    <section id="form-3" class="form-register">
+        <h4>Datos de Contacto</h4>
+        <p>Ingrese sus datos de Contacto</p>
+        <input type="text" placeholder="Ingrese su Telefono" class="controls">
+        <input type="text" placeholder="Ingrese su Correo" class="controls"> 
+
+        <!-- Botones -->
+        <input type="submit" value="Siguiente" class="botons"> 
+        <input type="button" value="Atrás" class="botons" onclick="goBack()">
+
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>
