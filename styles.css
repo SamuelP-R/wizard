@@ -64,16 +64,14 @@ body {
   }
 
   .image img {
-    max-width: 50%;
     height: 521px;
+    width: 368px;
     display: block;
   }
 
   .image{
-    width: 600px;
-    height: 400px;
     margin: 0;
-    padding: auto;
+    padding: 0;
   }
   
   .controls {
