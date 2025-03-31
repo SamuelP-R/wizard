@@ -21,3 +21,12 @@ function goBack() {
         currentSection--;
     }
 }
+
+const steps = document.querySelectorAll('.step');
+let currentStep = 0;
+documentgetElementById("nextStep").addEventListener("click", () => {
+    if (currentStep > steps.length){
+        steps[currentStep].classList.add("active");
+        currentStep++;
+    }
+})

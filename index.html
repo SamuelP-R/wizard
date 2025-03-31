@@ -14,53 +14,205 @@
                 <img src="img/tax_data.jpeg" alt="">
             </div>
             <div class="form-content">
+                <div>
                 <h4>Datos Fiscales</h4>
+                </div>
+                <div>
         <p>Ingrese sus datos Fiscales</p>
+                </div>
+                <div>
+                    <div class="wizard">
+                        <div class="step active">
+                            <span class="circle"></span>
+                            <span class="line"></span>
+                        </div>
+                        <div class="step">
+                            <span class="circle"></span>
+                            <span class="line"></span>
+                        </div>
+                        <div class="step">
+                            <span class="circle"></span>
+                        </div>
+                    </div>
+                </div>
+        <div class="form-column">
+            <div class="form-row">
         <input type="text" placeholder="Ingrese su Nombre" class="controls">
-        <input type="text" placeholder="Ingrese su RFC" class="controls"> 
-        <input type="text" placeholder="Ingrese su CURP" class="controls"> 
-        <input type="text" placeholder="Ingrese el Nombre o Razon Social" class="controls"> 
-        <input type="text" placeholder="Regimen Fiscal" class="controls"> 
+            </div>
+            <div class="form-row">
+        <input type="text" placeholder="Ingrese su RFC" class="controls">
+            </div>
+        </div>
+        <div class="form-column">
+            <div class="form-row">
+        <input type="text" placeholder="Ingrese su CURP" class="controls">
+            </div>
+            <div class="form-row">
+        <input type="text" placeholder="Ingrese el Nombre o Razon Social" class="controls">
+            </div>
+        </div>
+        <div class="form-column">
+            <div class="form-row">
+        <input type="text" placeholder="Regimen Fiscal" class="controls">
+            </div>
+            <div class="form-row">
         <input type="text" placeholder="Regimen Fical del Receptor" class="controls"> 
+            </div>
+        </div>
 
         <!-- Boton -->
-        <input type="button" value="Siguiente" class="botons" onclick="showNextSection()"> 
+         <div class="form-button-comuln">
+            <div>
+        <input type="button" id="nextStep" value="Siguiente" class="botons" onclick="showNextSection()">
+            </div>
+         </div>
+
             </div>
         </div>
         
     </section>
     <!-- Segundo Formulario Domicilio -->
     <section id="form-2" class="form-register">
+        <div class="form-container">
+            <div class="image">
+                <img src="img/address.jpeg" alt="">
+            </div>
+            <div class="form-content">
+                <div>
         <h4>Domicilio</h4>
-        <p>Ingrese su Domicilio</p>
+                </div>
+                <div>
+        <p>Ingrese sus datos de Domicilio</p>
+                </div>
+                <div>
+                    <div class="wizard">
+                        <div class="step active">
+                            <span class="circle"></span>
+                            <span class="line"></span>
+                        </div>
+                        <div class="step">
+                            <span class="circle"></span>
+                            <span class="line"></span>
+                        </div>
+                        <div class="step">
+                            <span class="circle"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-column">
+                    <div class="form-row">
         <input type="text" placeholder="Ingrese su Calle" class="controls">
+
+                    </div>
+                    <div class="form-row">
         <input type="text" placeholder="Ingrese su No. Ext." class="controls"> 
-        <input type="text" placeholder="Ingrese su No. Int." class="controls"> 
-        <input type="text" placeholder="Ingrese su Colonia" class="controls"> 
+
+                    </div>
+                </div>
+                <div class="form-column">
+                    <div class="form-row">
+        <input type="text" placeholder="Ingrese su No. Int." class="controls">
+                    </div>
+                    <div class="form-row">
+        <input type="text" placeholder="Ingrese su Colonia" class="controls">
+                    </div>
+                </div>
+                <div class="form-column">
+                    <div class="form-row">
         <input type="text" placeholder="Ingrese su Ciudad" class="controls"> 
-        <input type="text" placeholder="Ingrese su Municipio" class="controls"> 
+                    </div>
+                    <div class="form-row">
+        <input type="text" placeholder="Ingrese su Municipio" class="controls">
+                    </div>
+                </div>
+                <div class="form-column">
+                    <div class="form-row">
         <input type="text" placeholder="Ingrese su Estado" class="controls"> 
+
+                    </div>
+                    <div class="form-row">
         <input type="text" placeholder="Ingrese su Pais" class="controls"> 
+                    </div>
+                </div>
+                <div class="form-column">
+                    <div class="form-row">
         <input type="text" placeholder="Ingrese su Codigo Postal" class="controls"> 
+                    </div>
+                    <div class="form-row">
         <input type="text" placeholder="Ingrese su Referencia" class="controls"> 
-        <input type="text" placeholder="Ingrese su Clave pais" class="controls"> 
+                    </div>
+                </div>
+                <div class="form-column">
+                    <div class="form-row">
+        <input type="text" placeholder="Ingrese su Clave pais" class="controls">
+                    </div>
+                    <div class="form-row">
         <input type="text" placeholder="Ingrese su Residencia fiscal" class="controls"> 
 
-        <!-- Botones -->
-        <input type="button" value="Siguiente" class="botons" onclick="showNextSection()"> 
+                    </div>
+                </div>
+                <!-- Boton -->
+                <div class="form-button-comuln">
+                    <div>
         <input type="button" value="Atrás" class="botons" onclick="goBack()">
+                    </div>
+                    <div>
+        <input type="button" id="nextStep" value="Siguiente" class="botons" onclick="showNextSection()">
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </section>
-    <!-- Segundo Formulario Datos de Contacto -->
+    <!-- Tercer Formulario Datos de Contacto -->
     <section id="form-3" class="form-register">
+        <div class="form-container">
+            <div class="image">
+                <img src="img/contact.jpeg" alt="">
+            </div>
+            <div class="form-content">
+                <div>
         <h4>Datos de Contacto</h4>
+                </div>
+                <div>
         <p>Ingrese sus datos de Contacto</p>
+                </div>
+                <div>
+                    <div class="wizard">
+                        <div class="step active">
+                            <span class="circle"></span>
+                            <span class="line"></span>
+                        </div>
+                        <div class="step">
+                            <span class="circle"></span>
+                            <span class="line"></span>
+                        </div>
+                        <div class="step">
+                            <span class="circle"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-column">
+                    <div class="form-row">
         <input type="text" placeholder="Ingrese su Telefono" class="controls">
-        <input type="text" placeholder="Ingrese su Correo" class="controls"> 
-
-        <!-- Botones -->
-        <input type="submit" value="Siguiente" class="botons"> 
+                    </div>
+                    <div class="form-row">
+        <input type="text" placeholder="Ingrese su Correo" class="controls">
+                    </div>
+                </div>
+                  <!-- Botones -->
+                <div class="form-button-comuln">
+                    <div>
         <input type="button" value="Atrás" class="botons" onclick="goBack()">
+                    </div>
+                    <div>
+        <input type="submit" value="Siguiente" class="botons">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      
 
     </section>
 
