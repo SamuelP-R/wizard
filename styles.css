@@ -132,31 +132,29 @@ h4 {
 }
 
 .step {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .circle {
-  width: 15px;
-  height: 15px;
-  background-color: #506dac; 
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.3s;
+    width: 15px;
+    height: 15px;
+    background-color: #DCCFBF; /* Color beige inactivo */
+    border-radius: 50%;
+    transition: background-color 0.3s;
 }
 
 .line {
-  width: 50px;
-  height: 2px;
-  background-color: #b0b6c4; 
-  display: inline-block;
-  transition: background-color 0.3s;
+    width: 50px;
+    height: 2px;
+    background-color: #DCCFBF; /* Color beige inactivo */
+    transition: background-color 0.3s;
 }
 
 .step.active .circle {
-  background-color: #1f53c5; 
+    background-color: #6B754B; /* Verde cuando está activo */
 }
 
 .step.active .line {
-  background-color: #1f53c5; 
+    background-color: #6B754B; /* Línea verde cuando está activa */
 }
