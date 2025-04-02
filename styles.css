@@ -60,8 +60,8 @@ body {
   }
 
   .form-column{
-    height: 55px;
-    columns: 2 15px;
+    height: 45px;
+    columns: 2 10px;
     margin-bottom: 5px;
   }
 
@@ -125,36 +125,87 @@ h4 {
 
 .wizard {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Cambiado de center a flex-start */
   justify-content: center;
-  width: 300px;
+  width: 400px;
   margin: 50px auto;
 }
 
 .step {
-    display: flex;
-    align-items: center;
+  display: flex;
+  flex-direction: column; /* Añadido para alinear verticalmente */
+  align-items: center;
+  margin-right: 20px; /* Añadido para espacio entre pasos */
 }
 
 .circle {
-    width: 15px;
-    height: 15px;
-    background-color: #DCCFBF; /* Color beige inactivo */
-    border-radius: 50%;
-    transition: background-color 0.3s;
+  width: 30px;
+  height: 30px;
+  background-color: #506dac; 
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
 }
 
 .line {
-    width: 50px;
-    height: 2px;
-    background-color: #DCCFBF; /* Color beige inactivo */
-    transition: background-color 0.3s;
+  width: 500px;
+  height: 2px;
+  background-color: #b0b6c4; 
+  display: inline-block;
+  transition: background-color 0.3s;
 }
 
 .step.active .circle {
-    background-color: #6B754B; /* Verde cuando está activo */
+  background-color: #1f53c5; 
 }
 
 .step.active .line {
-    background-color: #6B754B; /* Línea verde cuando está activa */
+  background-color: #1f53c5; 
+}
+
+
+
+.tooltip-container {
+  position: absolute;
+  display: inline-block;
+}
+
+.tooltip-button {
+  font-size: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tooltip-button:hover {
+  background-color: #45a049;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 250px;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: -150%; /* Lo coloca más abajo del botón */
+  left: 50%;
+  margin-left: -125px; /* Centra el texto */
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
 }

@@ -1,26 +1,28 @@
-let currentSection = 1;
-let currentStep = 0;
+let currentSection = 0;
+const forms = document.querySelectorAll("section");
+const steps = document.querySelectorAll(".wizard .step");
 
-// Seleccionar todos los formularios y pasos del wizard
-const forms = document.querySelectorAll("section[id^='form-']");
-const steps = document.querySelectorAll(".step");
-
-// FUNCIONES PARA MOSTRAR SECCIONES DEL FORMULARIO
-function showSection(stepIndex) {
-    // Ocultar todos los formularios
-    forms.forEach(form => form.style.display = 'none');
-    
-    // Mostrar solo el formulario correspondiente al paso actual
-    const activeForm = document.getElementById(`form-${stepIndex + 1}`);
-    if (activeForm) {
-        activeForm.style.display = 'block';
+function showNextSection() {
+    if (currentSection < forms.length - 1) {
+        forms[currentSection].style.display = 'none';
+        currentSection++;
+        forms[currentSection].style.display = 'block';
+        updateWizard();
     }
 }
 
-// ACTUALIZA EL WIZARD VISUALMENTE
-function updateWizard(stepIndex) {
+function goBack() {
+    if (currentSection > 0) {
+        forms[currentSection].style.display = 'none';
+        currentSection--;
+        forms[currentSection].style.display = 'block';
+        updateWizard();
+    }
+}
+
+function updateWizard() {
     steps.forEach((step, index) => {
-        if (index <= stepIndex) {
+        if (index <= currentSection) {
             step.classList.add("active");
         } else {
             step.classList.remove("active");
@@ -28,33 +30,7 @@ function updateWizard(stepIndex) {
     });
 }
 
-// FUNCIÓN PARA AVANZAR
-function showNextSection() {
-    if (currentStep < steps.length - 1) {
-        currentStep++;
-        showSection(currentStep);
-        updateWizard(currentStep);
-    }
-}
-
-// FUNCIÓN PARA RETROCEDER
-function goBack() {
-    if (currentStep > 0) {
-        currentStep--;
-        showSection(currentStep);
-        updateWizard(currentStep);
-    }
-}
-
-// EVENTOS DE BOTONES "SIGUIENTE" Y "ATRÁS"
-document.querySelectorAll(".next").forEach(button => {
-    button.addEventListener("click", showNextSection);
+// Ocultar todos los formularios excepto el primero
+forms.forEach((form, index) => {
+    if (index !== 0) form.style.display = 'none';
 });
-
-document.querySelectorAll(".prev").forEach(button => {
-    button.addEventListener("click", goBack);
-});
-
-// AL CARGAR LA PÁGINA, MOSTRAR EL PRIMER FORMULARIO
-showSection(currentStep);
-updateWizard(currentStep);

@@ -7,30 +7,37 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    
+    <!-- Wizard Global -->
+<div class="wizard">
+    <div class="step active">
+        <span class="circle"></span>
+        <span class="line"></span>
+        <p>1</p>
+    </div>
+    <div class="step">
+        <span class="circle"></span>
+        <span class="line"></span>
+        <p>2</p>
+    </div>
+    <div class="step">
+        <span class="circle"></span>
+        <span class="line"></span>
+        <p>3</p>
+    </div>
+</div>
+    <!-- Fin de Wizard global -->
+
     <!-- Primer Formulario Informacion Fiscal -->
     <section id="form-1" class="form-register">
         <div class="form-container">
             <div class="form-content">
                 <div>
-                <h4>Datos Fiscales</h4>
+                <h4>Informacion Fiscales</h4>
                 </div>
                 <div>
         <p>Ingrese sus datos Fiscales</p>
-                </div>
-                <div>
-                    <div class="wizard">
-                        <div class="step active">
-                            <span class="circle"></span>
-                            <span class="line"></span>
-                        </div>
-                        <div class="step">
-                            <span class="circle"></span>
-                            <span class="line"></span>
-                        </div>
-                        <div class="step">
-                            <span class="circle"></span>
-                        </div>
-                    </div>
                 </div>
         <div class="form-column">
             <div class="form-row">
@@ -63,8 +70,12 @@
         <input type="button" id="nextStep" value="Siguiente" class="botons" onclick="showNextSection()">
             </div>
          </div>
-
             </div>
+
+        <div class="tooltip-container">
+            <span class="tooltip-text">Verificar que los datos a ingresar sean iguales a la Constancia de Situacion Fiscal.</span>
+            <button class="tooltip-button">?</button>
+          </div>
         </div>
         
     </section>
@@ -77,21 +88,6 @@
                 </div>
                 <div>
         <p>Ingrese sus datos de Domicilio</p>
-                </div>
-                <div>
-                    <div class="wizard">
-                        <div class="step active">
-                            <span class="circle"></span>
-                            <span class="line"></span>
-                        </div>
-                        <div class="step">
-                            <span class="circle"></span>
-                            <span class="line"></span>
-                        </div>
-                        <div class="step">
-                            <span class="circle"></span>
-                        </div>
-                    </div>
                 </div>
                 <div class="form-column">
                     <div class="form-row">
@@ -155,8 +151,14 @@
                     </div>
                 </div>
             </div>
+            <div class="tooltip-container">
+                <span class="tooltip-text">Para verificar sus datos actualizados puede escanear los codigos QR que estan es us Cosntancia de Situacion Fiscal con su telefono inteligente.</span>
+                <button class="tooltip-button">!</button>
+              </div>
+            </div>
         </div>
-
+        
+        
     </section>
     <!-- Tercer Formulario Datos de Contacto -->
     <section id="form-3" class="form-register">
@@ -167,21 +169,6 @@
                 </div>
                 <div>
         <p>Ingrese sus datos de Contacto</p>
-                </div>
-                <div>
-                    <div class="wizard">
-                        <div class="step active">
-                            <span class="circle"></span>
-                            <span class="line"></span>
-                        </div>
-                        <div class="step">
-                            <span class="circle"></span>
-                            <span class="line"></span>
-                        </div>
-                        <div class="step">
-                            <span class="circle"></span>
-                        </div>
-                    </div>
                 </div>
                 <div class="form-column">
                     <div class="form-row">
@@ -201,11 +188,17 @@
                     </div>
                 </div>
             </div>
+            <div class="tooltip-container">
+                <span class="tooltip-text">Gracias a estos datos que nos comparte nos permitira contactarnos con usted ya sea para notificaciones, seguimiento de soporte y atencion</span>
+                <button class="tooltip-button">?</button>
+              </div>
         </div>
 
       
 
     </section>
+
+    
 
     <script src="index.js"></script>
 </body>
